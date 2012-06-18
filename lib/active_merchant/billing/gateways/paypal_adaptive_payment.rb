@@ -317,6 +317,10 @@ module ActiveMerchant
           x.returnUrl opts[:return_url]
           x.displayMaxTotalAmount opts[:displayMaxTotalAmount] if opts.has_key?(:displayMaxTotalAmount)
 
+          # supported berow parameters
+          x.dateOfMonth opts[:date_of_month] if opts.has_key?(:date_of_month)
+          x.paymentPeriod opts[:payment_period] if opts.has_key?(:payment_period)
+
           # notify url
           x.ipnNotificationUrl opts[:notify_url] if
             opts.has_key?(:notify_url)
