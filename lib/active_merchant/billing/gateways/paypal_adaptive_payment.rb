@@ -308,14 +308,14 @@ module ActiveMerchant
           x.endingDate opts[:end_date].strftime("%Y-%m-%dT%H:%M:%S")
           x.startingDate opts[:start_date].strftime("%Y-%m-%dT%H:%M:%S")
           x.maxTotalAmountOfAllPayments opts[:max_amount]
-          x.maxAmountPerPayment opts[:maxAmountPerPayment] if opts.has_key?(:maxAmountPerPayment)
+          x.maxAmountPerPayment opts[:max_amount_per_payment] if opts.has_key?(:max_amount_per_payment)
           x.memo opts[:memo] if opts.has_key?(:memo)
-          x.maxNumberOfPayments opts[:maxNumberOfPayments] if
-            opts.has_key?(:maxNumberOfPayments)
+          x.maxNumberOfPayments opts[:max_number_of_payments] if
+            opts.has_key?(:max_number_of_payments)
           x.currencyCode options[:currency_code]
           x.cancelUrl opts[:cancel_url]
           x.returnUrl opts[:return_url]
-          x.displayMaxTotalAmount opts[:displayMaxTotalAmount] if opts.has_key?(:displayMaxTotalAmount)
+          x.displayMaxTotalAmount opts[:display_max_total_amount] if opts.has_key?(:display_max_total_amount)
 
           # supported berow parameters
           x.dateOfMonth opts[:date_of_month] if opts.has_key?(:date_of_month)
