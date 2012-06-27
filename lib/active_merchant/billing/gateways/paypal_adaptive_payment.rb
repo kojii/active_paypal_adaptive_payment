@@ -322,8 +322,9 @@ module ActiveMerchant
           x.paymentPeriod opts[:payment_period] if opts.has_key?(:payment_period)
 
           # notify url
-          x.ipnNotificationUrl opts[:notify_url] if
-            opts.has_key?(:notify_url)
+          x.ipnNotificationUrl opts[:notify_url] if opts.has_key?(:notify_url)
+          x.feesPayer opts[:fees_payer] if opts.has_key?(:fees_payer)
+
         end
       end
 
